@@ -16,7 +16,7 @@ void loop() {
   float analog;
 
   /*
-   * V = 5D / 1023
+   * V = 5D / 1024
   */
 
   measurement = analogRead(voltagePin);
@@ -25,8 +25,8 @@ void loop() {
     Serial.println(measurement);
 
     // 5V is the reference voltage of the ADC on the Arduino Uno
-    // 1023 is the maximum resolution of ADC (10 bits)
-    analog = (measurement * 5.00)/1023.00;
+    // 1024 is the maximum resolution of ADC (10 bits)
+    analog = (measurement * 5.00)/1024.00;
     Serial.print("voltage = ");
     Serial.println(analog, PRECISION);
 
@@ -41,8 +41,8 @@ void loop() {
     Serial.println(measurement);
 
     // 5V is the reference voltage of the ADC on the Arduino Uno
-    // 1023 is the maximum resolution of ADC (10 bits)
-    vout = (measurement * 5.00)/1023.00;
+    // 1024 is the maximum resolution of ADC (10 bits)
+    vout = (measurement * 5.00)/1024.00;
     Serial.print("vout = ");
     Serial.println(vout, PRECISION);
     
